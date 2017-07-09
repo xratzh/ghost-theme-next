@@ -29,7 +29,7 @@
                                 </a>
                             </span>
                             <!--
-             <span id="/blog/2016/05/09/flink-internals-understanding-execution-resources/" class="leancloud_visitors" data-flag-title="Flink 原理与实现：理解 Flink 中的计算资源">
+             <span id="/post-meta-item-text" class="leancloud_visitors" data-flag-title="post-meta-item-text">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -45,23 +45,37 @@
                 </article>
             </div>
         </div>
+            <p align="center"><完></p>
+        <aside>
+            {{#next_post}}
+            <div align="justify"><a href="{{url}}">新一篇:{{title}}</a></div>
+            {{/next_post}}
+            {{#prev_post}}
+            <div align="justify"><a href="{{url}}">旧一篇:{{title}}</a></div>
+            {{/prev_post}}
+        </aside>
+        <hr style="height:1px;border:none;border-top:1px dashed #0066CC;" />
+        <h5 align="center">评论框君很顽皮，可能需要科学上网才能看到哟~</h5>
         <div class="comments" id="comments">
             <!-- 页面绑定 - 请勿改动 -->
             <div class="ds-thread" data-thread-key="{{id}}" data-title="{{title}}" data-url="{{url absolute="true"}}"></div>
             <!-- 结束绑定 -->
 
             <!-- 不必修改下述代码，在head inject中添加配置即可 -->
-            <script type="text/javascript">
-                var duoshuoQuery = {short_name:duoshuo_name};
-                (function() {
-                    var ds = document.createElement('script');
-                    ds.type = 'text/javascript';ds.async = true;
-                    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-                    ds.charset = 'UTF-8';
-                    (document.getElementsByTagName('head')[0]
-                    || document.getElementsByTagName('body')[0]).appendChild(ds);
-                })();
+            <div id="disqus_thread"></div>
+            <script>
+            var disqus_config = function () {
+            this.page.url = '{{url absolute="true"}}';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = 'ghost-{{id}}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://' + duoshuo_name + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
             </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             <!-- 结束替换位置 -->
 
         </div>

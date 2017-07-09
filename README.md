@@ -10,7 +10,7 @@
 
 ###无Git安装：
 
-点击代码上方的 `Download ZIP`，并把三个子目录（next-mist/，next-muse/，next-pisces/）解压到 `ghost_path/content/themes` 目录下。
+点击代码上方的 `Download ZIP`，并把next-mist解压到 `ghost_path/content/themes` 目录下。
 
 ###Git安装
 
@@ -18,7 +18,7 @@
 
 	git clone https://github.com/microud/ghost-theme-next.git
 	mv ghost-theme-next/* .
-	
+
 然后修改修改自己所需配置，重启Ghost。至于 `ghost-theme-next` 目录删除即可。
 
 ##必要配置
@@ -42,28 +42,28 @@ link中的名字和链接任意，显示在侧边栏的链接位置。
 - author_name: 显示在网站侧边栏上头像下的那个名字
 - duoshuo\_name: 多说的short_name, 用来标识多说所有者的那个东东，如果不填js会弹一会儿alert，不过可以在主题中删掉多说的代码...
 - links: 数组，理论上可无限添加，其中的每个元素对应的Json对象由name 和 link两个键值对构成，分别为链接名和地址，要加协议（http/https）
-<pre>
-	&lt;div id="site-config"&gt;
-	{
-	    "author_name": "云青陌",
-	    "duoshuo_name": "xknow",
-	    "links": [
-	    {
-	        "name": "认知",
-	        "link": "http://xknow.net"
-	    },
-	    {
-	        "name": "认知",
-	        "link": "http://xknow.net"
-	    },
-	    {
-	        "name": "认知",
-	        "link": "http://xknow.net"
-	    }
-	    ]
-	}
-	&lt;/div&gt;
-</pre>
+  <pre>
+  &lt;div id="site-config"&gt;
+  {
+      "author_name": "云青陌",
+      "duoshuo_name": "xknow",
+      "links": [
+      {
+          "name": "认知",
+          "link": "http://xknow.net"
+      },
+      {
+          "name": "认知",
+          "link": "http://xknow.net"
+      },
+      {
+          "name": "认知",
+          "link": "http://xknow.net"
+      }
+      ]
+  }
+  &lt;/div&gt;
+  </pre>
 
 ###阅读数记录
 
@@ -94,6 +94,12 @@ link中的名字和链接任意，显示在侧边栏的链接位置。
 ###bugs
 
 - [ ] tag页面最多只列5篇，考虑改用API实现
+
+## update
+
+- 添加上一文和下一文按钮
+- 多说修改为disqus，使用方法只需在`（code inject）`中将多说的用户名改为disqus的用户名前缀即可。比如需要访问`https://xknow.disqus.com/embed.js`，只需要在`（code inject）`中这样填写`"duoshuo_name": "xknow"`
+- 删除部分多说代码
 
 ##贡献
 
