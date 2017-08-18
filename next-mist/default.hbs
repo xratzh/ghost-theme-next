@@ -105,7 +105,7 @@
 $("#search-input").keypress(function(key){
     if (key.keyCode == 13)
     {
-        window.open("/search/?keyword=" + $(this).val(), "_blank");
+        window.open("https://www.google.com/search?q=" + $(this).val() + "+site:{{@blog.url}}", "_blank");
     }
 
 });
