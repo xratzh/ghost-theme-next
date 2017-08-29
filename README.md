@@ -17,7 +17,7 @@
 进入 `ghost_path/content/themes`，执行
 
 	git clone https://github.com/xratzh/ghost-theme-next.git
-	mv ghost-theme-next/* .
+	mv ghost-theme-next/* . && rm -rf ghost-theme-next
 
 然后修改修改自己所需配置，重启Ghost。至于 `ghost-theme-next` 目录删除即可。
 
