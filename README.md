@@ -16,7 +16,7 @@
 
 进入 `ghost_path/content/themes`，执行
 
-	git clone https://github.com/microud/ghost-theme-next.git
+	git clone https://github.com/xratzh/ghost-theme-next.git
 	mv ghost-theme-next/* .
 
 然后修改修改自己所需配置，重启Ghost。至于 `ghost-theme-next` 目录删除即可。
@@ -95,11 +95,13 @@ link中的名字和链接任意，显示在侧边栏的链接位置。
 
 - [ ] tag页面最多只列5篇，考虑改用API实现
 
-## update
+## update by xratzh
 
 - 添加上一文和下一文按钮
 - 多说修改为disqus，使用方法只需在`（code inject）`中将多说的用户名改为disqus的用户名前缀即可。比如需要访问`https://xknow.disqus.com/embed.js`，只需要在`（code inject）`中这样填写`"duoshuo_name": "xknow"`
 - 删除部分多说代码
+- 搜索设置为谷歌搜索
+- 更新1.0.0以上版本的变量名称
 
 ##贡献
 
