@@ -25,7 +25,7 @@
                             </span>
                             <span class="post-comments-count">&nbsp; | &nbsp;
                                 <a href="#comments" itemprop="discussionUrl">
-                                    <span class="post-comments-count ds-thread-count" data-thread-key="{{id}}" itemprop="commentsCount"></span>
+                                    <span class="post-comments-count ds-thread-count" data-thread-key="{{comment_id}}" itemprop="commentsCount"></span>
                                 </a>
                             </span>
                             <!--
@@ -58,7 +58,7 @@
         <h5 align="center">评论框君很顽皮，可能需要科学上网才能看到哟~</h5>
         <div class="comments" id="comments">
             <!-- 页面绑定 - 请勿改动 -->
-            <div class="ds-thread" data-thread-key="{{id}}" data-title="{{title}}" data-url="{{url absolute="true"}}"></div>
+            <div class="ds-thread" data-thread-key="{{comment_id}}" data-title="{{title}}" data-url="{{url absolute="true"}}"></div>
             <!-- 结束绑定 -->
 
             <!-- 不必修改下述代码，在head inject中添加配置即可 -->
@@ -66,7 +66,7 @@
             <script>
             var disqus_config = function () {
             this.page.url = '{{url absolute="true"}}';  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = 'ghost-{{id}}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            this.page.identifier = 'ghost-{{comment_id}}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
             };
             (function() { // DON'T EDIT BELOW THIS LINE
             var d = document, s = d.createElement('script');
